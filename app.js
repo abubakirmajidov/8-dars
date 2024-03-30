@@ -24,14 +24,10 @@ function startGame() {
     btn.textContent = answers[index];
 
     btn.addEventListener("click", () => {
-      if (!isGameOver) {
-        if (btn.textContent == result) {
-          alert("Tog'ri");
-        } else {
-          alert("No'tog'ri");
-        }
-
-        isGameOver = true;
+      if (btn.textContent == result) {
+        alert("Tog'ri");
+      } else {
+        alert("No'tog'ri");
       }
     });
   });
@@ -40,5 +36,3 @@ function startGame() {
 startGame();
 
 restartbtn.addEventListener("click", startGame);
-
-serchba.textContent = a;
